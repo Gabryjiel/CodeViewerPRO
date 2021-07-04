@@ -1,0 +1,6 @@
+<nav th:fragment="nav (items, url)">
+    <p>Nawigacja</p>
+    <a th:href="@{'/' + ${url} + '/' + ${item.id}}" th:each="item : ${items}">
+        <div th:text="${item.name}"></div>
+    </a>
+</nav>

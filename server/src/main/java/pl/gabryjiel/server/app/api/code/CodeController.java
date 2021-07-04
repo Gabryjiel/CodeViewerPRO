@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/code")
+@RequestMapping("/api/codes")
 public class CodeController {
     private final CodeService codeService;
 

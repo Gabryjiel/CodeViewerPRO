@@ -1,0 +1,5 @@
+<div class="squareList" th:fragment="squarelist (items, url)">
+    <div th:each="item : ${items}">
+        <a th:href="@{/{url}/{id}(id=${item.id}, url=${url})}" th:text="${item.name}"></a>
+    </div>
+</div>

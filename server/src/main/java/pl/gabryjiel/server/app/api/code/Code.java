@@ -2,6 +2,7 @@ package pl.gabryjiel.server.app.api.code;
 
 import lombok.Getter;
 import lombok.Setter;
+import pl.gabryjiel.server.app.api.task.Task;
 
 import javax.persistence.*;
 
@@ -18,4 +19,7 @@ public class Code {
     @Column(name = "code_content", columnDefinition = "text")
     private String content;
 
+    @OneToOne(optional = false)
+    @JoinColumn(name = "task_id", nullable = false)
+    private Task task;
 }

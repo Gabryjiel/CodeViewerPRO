@@ -1,0 +1,13 @@
+<div class="task" th:fragment="taskView(task)">
+<!--  <div th:text="${task.description}"></div>-->
+<textarea class="language-java" readonly th:text="${task.description}"></textarea>
+<!--  <figure>-->
+<!--    <blockquote>-->
+<!--    <pre>-->
+<!--      <code class="language-java" th:text="${task.description}"></code>-->
+<!--    </pre>-->
+<!--    </blockquote>-->
+<!--  </figure>-->
+  <div class="codeCaption" th:text="${'Code'}"></div>
+
+</div>

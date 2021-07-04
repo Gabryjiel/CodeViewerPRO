@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Viewer - Create New Lesson</title>
+    <link th:href="@{/css/general.css}" rel="stylesheet" />
+</head>
+<body>
+<header th:replace="fragments/header :: header"></header>
+
+<div id="container">
+    <main>
+        <h1>Create new Lesson</h1>
+
+        <form th:action="@{/lessons}" th:object="${lesson}" method="post">
+            <div>
+                <label for="name">Nazwa:</label>
+                <input type="text" id="name" name="name" />
+            </div>
+
+            <div>
+                <input type="submit" />
+            </div>
+        </form>
+    </main>
+</div>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>

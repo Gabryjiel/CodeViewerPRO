@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link th:href="@{/css/general.css}" rel="stylesheet" />
+</head>
+
+<body>
+<header th:replace="fragments/header :: header"></header>
+
+<div id="container">
+  <main>
+    <div th:replace="fragments/squarelist :: squarelist(${subjects}, ${url})"></div>
+  </main>
+</div>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+</body>
+
+</html>

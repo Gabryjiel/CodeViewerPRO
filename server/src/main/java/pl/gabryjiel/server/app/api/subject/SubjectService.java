@@ -1,6 +1,7 @@
 package pl.gabryjiel.server.app.api.subject;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class SubjectService {
     }
 
     public List<Subject> findAll() {
-        return this.subjectRepository.findAll();
+        return this.subjectRepository.findAll(Sort.by("id"));
     }
 
     public Subject getSubjectById(Long subjectId) {

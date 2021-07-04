@@ -39,4 +39,8 @@ public class TaskService {
                 .ifPresentOrElse(task -> taskRepository.deleteById(taskId),
                         () -> {throw new NoSuchElementException();});
     }
+
+    public List<Task> getTasksByLessonId(Long lessonId) {
+        return taskRepository.getTasksByLesson_Id(lessonId);
+    }
 }

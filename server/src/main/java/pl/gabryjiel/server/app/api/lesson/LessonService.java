@@ -45,4 +45,8 @@ public class LessonService {
                 .ifPresentOrElse(lesson -> lessonRepository.deleteById((lessonId)),
                         () -> {throw new NoSuchElementException();});
     }
+
+    public List<Lesson> getLessonsBySubjectId(Long subjectId) {
+        return lessonRepository.getLessonsBySubjectId(subjectId);
+    }
 }
